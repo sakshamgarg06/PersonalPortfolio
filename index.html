@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saksham - developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(1, 1, 31);
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(31, 31, 96);
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            color: rgb(135, 135, 221);
+        }
+        .left{
+            font-size: 1.5rem;
+        }
+        .firstSection{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 23px 0;
+            height: 90vh;
+        }
+        .firstSection > div{
+            width: 30%;
+
+        }
+        .leftSection{
+            font-size: 2.2rem;
+        }
+        .rightSection img{
+            width: 100%;
+        }
+        .rightSection{
+            margin: 100px 0;
+        }
+        .purple{
+            color: rgb(176, 125, 224);
+        }
+        .text-grey{
+            color: gray;
+            font-size: 1.2rem;
+        }
+        #element{
+            color: rgb(176, 125, 224);
+        }
+        .secondSection{
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+        .secondSection h1{
+            font-size: 1.9rem;
+        }
+        .secondSection .box{
+            background-color: white;
+            width: 80vw;
+            height: 2px;
+            margin: 100px 0;
+            display: flex;
+        }
+        .secondSection .vertical{
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin-right: 300px;
+            margin-left: 100px;
+        }
+        .image-top{
+            width: 50px;
+            position: relative;
+            top: -60px;
+            left: -20px;
+        }
+        .vertical-title{
+            position: relative;
+            top: 45px;
+            left: -10px;
+            width: 220px;
+        }
+        .vertical-desc{
+            position: relative;
+            top: 46px;
+            color: grey;
+            width: 220px;
+            font-size: 12px;
+            left: -10px;
+        }
+        .secondSection .box2{
+            background-color: white;
+            width: 80vw;
+            height: 2px;
+            margin: 300px 0;
+            display: flex;
+        }
+        footer{
+            background-color: rgb(19, 19, 78);
+        }
+        .footer{
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+        .footer ul{
+            list-style: none;
+        }
+        .footer ul a{
+            text-decoration: none;
+            color: white;
+        }
+        .footer > div{
+            width: 223px;
+        }
+        footer .footer-rights{
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .Contact h2{
+            font-size: 40px;
+            color: #ededed;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .Contact form{
+            width: 600px;
+            text-align: center;
+        }
+        form .input-box{
+            display: flex;
+            justify-content: space-between;
+        }
+        .input-box .input-field{
+            width: 44.8%;
+        }
+        .item{
+            width: 100%;
+            padding: 18px;
+            background: transparent;
+            border: 2px solid #0ef;
+            outline: none;
+            border-radius: 6px;
+            font-size: 16px;
+            color: #ededed;
+            margin: 12px 0;
+        }
+        .input-field .item::placeholder{
+            color: rgba(255, 255, 255, 0.3);
+        }
+        .input-field .error-txt{
+            font-size: 14px;
+            color: #d93025;
+            text-align: left;
+            margin: -5px 0 10px;
+            display: none;
+        }
+        textarea{
+            resize: none;
+        }
+        form .textarea-field .error-txt{
+            margin-top: -10px;
+        }
+        form button{
+            padding: 12px;
+            background: #0ef;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            box-shadow: 0 0 10px #0ef;
+            font-size: 16px;
+            color: #333;
+            letter-spacing: 1px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.5s;
+        }
+        form button:hover{
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                My Portfolio
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#text">Contect me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Saksham</span>
+            
+            <div>And i'm a passionate</div>
+            <span id="element"></span>
+        </div>
+            <div class="rightSection">
+                <img src="./developer.png" alt="">
+            </div>
+        </section>
+        <section class="secondSection" id="about">
+            <br>
+            <br><br>
+            <span class="text-grey">Learning Never Stops</span>
+            <h1>My Academic & Professional Adventures</h1>
+            <br>
+            <br>
+            <br>
+            <div class="box">
+                <div class="vertical">
+                    <img src="./secondary.png" class="image-top" alt="">
+                
+                <div class="vertical-title">
+                    Secondary School <br> (Class X) – 87.8%
+                </div>
+                <div class="vertical-desc">
+                    [Rashtriya Sr. Sec. School], [CBSE] 2021
+                </div>
+            </div>
+                <div class="vertical">
+                    <img src="./assignment.png" class="image-top" alt="">
+                
+                <div class="vertical-title">
+                    JEE Mains 2023 – 90%ile
+                </div>
+                <div class="vertical-desc">
+                    Qualified among top 10% of 1M+ candidates
+                </div>
+            </div>
+            <div class="vertical">
+                <img src="./diploma.png" class="image-top" alt="">
+            
+            <div class="vertical-title">
+                Chitkara University, Punjab
+            </div>
+            <div class="vertical-desc">
+                BTech in Computer Science & Engineering | 2023–2027
+                <br>
+                Current CGPA: 8.62
+            </div>
+        </div>
+            
+        </section>
+        <section class="secondSection">
+            <span class="text-grey">What I have done so far</span>
+            <h1>Work Experience</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="box">
+                <div class="vertical">
+                    <img src="./freelance-work.png" class="image-top" alt="">
+                
+                <div class="vertical-title">
+                    Mathematics Freelancer
+                </div>
+                <div class="vertical-desc">
+                    Self-Employed | 2023 - 2024
+                </div>
+            </div>
+                <div class="vertical">
+                    <img src="./badge.png" class="image-top" alt="">
+                
+                <div class="vertical-title">
+                    Subject Matter Expert (Statistics)
+                </div>
+                <div class="vertical-desc">
+                    Chegg Inc. | 2023 - 2025 
+                </div>
+            </div>
+            <div class="vertical">
+                <img src="./content.png" class="image-top" alt="">
+            
+            <div class="vertical-title">
+                Social Media Manager
+            </div>
+            <div class="vertical-desc">
+                Assignment Work Solutions | 2025 - Present
+               
+            </div>
+        </div>
+            
+        </section>
+        <section class="secondSection">
+            <span class="text-grey"> What I Know So Far </span>
+            <h1>Skills</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="box">
+                <div class="vertical">
+                    <img src="./vecteezy_3d-character-illustration-of-front-end-developer_12658272.png" class="image-top" alt="">
+                
+                <div class="vertical-title">
+                    Frontend Development
+                </div>
+                <div class="vertical-desc">
+                    HTML5
+                    <br>
+                    CSS3
+                    <br>
+                    JavaScript (ES6+)
+                </div>
+            </div>
+                <div class="vertical">
+                    <img src="./2621040.png" class="image-top" alt="">
+                
+                <div class="vertical-title">
+                    Programming Languages
+                </div>
+                <div class="vertical-desc">
+                    C++
+                    <br>
+                    Java
+                    <br>
+                    Python
+                </div>
+            </div>
+            <div class="vertical">
+                <img src="./4185714.png" class="image-top" alt="">
+            
+            <div class="vertical-title">
+                Currently Learning
+            </div>
+            <div class="vertical-desc">
+                Backend Development (Node.js, Express, MongoDB)
+                <br>
+                Data Structures & Algorithms (DSA) in Java
+               
+            </div>
+        </div>
+            
+        </section>
+        <div class="text" id="text">
+        <section class="Contact">
+            <h2>Contact Me!</h2>
+            <form id="form" action="https://formspree.io/f/xrbqpzoj" method="POST">
+                <input type="text" name="name" placeholder="Full Name" id="name" class="item" autocomplete="off">
+                <input type="email" name="email" placeholder="Email Address" id="email" class="item" autocomplete="off">
+                <input type="text" name="phone" placeholder="Phone Number" id="phone" class="item" autocomplete="off">
+                <input type="text" name="subject" placeholder="Subject" id="subject" class="item" autocomplete="off">
+                <textarea name="message" id="message" placeholder="Your Message" class="item" autocomplete="off"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+    </main>
+    <footer>
+        <div class="footer">
+            
+            <div class="footer-first">
+                <h3>Saksham's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="">Contact me</a></li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Github</a></li>
+                    <li><a href="">LinkedIn</a></li>
+                </ul>
+            </div>
+            
+            
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; sakshamsportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Graphic Designer', "Freelancer"],
+      typeSpeed: 50,
+    });
+  </script>
+  
+
+</body>
+</html>
